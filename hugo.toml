@@ -1,0 +1,21 @@
+# Pinned Hugo version: 0.167.0 (also in .hugo-version and README.md).
+# Keep all three in step. No theme, no modules, no npm tree.
+baseURL = "https://npv.co.nz/"
+languageCode = "en-NZ"
+title = "NPV Development Limited"
+disableKinds = ["taxonomy", "term", "RSS", "sitemap", "robotsTXT"]
+enableRobotsTXT = false
+
+[markup.goldmark.renderer]
+  unsafe = false
+
+[params]
+  legalName = "NPV Development Limited"
+  contactEmail = "hello@npv.co.nz"
+  # Public Companies Office register entry (checked 2026-10-12).
+  companyNumber = "3221406"
+  nzbn = "9429031276443"
+  incorporated = "2010"
+  # Footer copyright year. Static on purpose, so a build never changes the output
+  # by itself. Update it with a content change.
+  copyrightYear = "2026"

@@ -1,0 +1,14 @@
+{{ define "main" }}
+<section class="hero">
+<p class="eyebrow">{{ .Site.Title }}</p>
+<h1>{{ .Params.tagline }}</h1>
+<div class="lede">{{ .Content }}</div>
+<p><a class="button" href="/contact/">Get in touch &rarr;</a></p>
+</section>
+<section class="services" aria-labelledby="services">
+<h2 id="services">Services</h2>
+<div class="cards">
+{{ range .Params.services }}<div class="card"><h3>{{ .title }}</h3><p>{{ .text }}</p></div>
+{{ end }}</div>
+</section>
+{{ end }}

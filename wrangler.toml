@@ -1,0 +1,22 @@
+# Cloudflare Workers deploy config for the NPV site. Static assets only: there is
+# deliberately no `main` script and no Worker-first routing, so `static/_headers`
+# applies to every response.
+#
+# No routes or custom domains live here; they are attached in the Cloudflare
+# dashboard, so a deploy never touches them. No credential lives here either.
+
+name = "npv-website"
+compatibility_date = "2026-10-01"
+
+# The workers.dev URL and preview URLs are switched off, so the site has no
+# second public copy. If they are ever turned back on for a review, the _headers
+# file still marks any workers.dev response noindex.
+workers_dev = false
+preview_urls = false
+
+[assets]
+# Hugo's output directory; build it with `hugo --minify` before deploying.
+directory = "./public"
+# Serve public/404.html with a 404 status if Hugo emits one; otherwise
+# Cloudflare returns a bare 404.
+not_found_handling = "404-page"

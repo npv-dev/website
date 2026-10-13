@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en-NZ">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
+<meta name="description" content="NPV Development Limited is a New Zealand company providing software and data engineering services.">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="site-header">
+<div class="wrap">
+<a class="wordmark" href="/" aria-label="NPV Development Limited, home">NPV<span class="dot" aria-hidden="true">.</span></a>
+<nav aria-label="Main">
+<a href="/#services">Services</a>
+<a href="/contact/">Contact</a>
+<a href="/privacy/">Privacy</a>
+</nav>
+</div>
+</header>
+<main class="wrap">
+{{ block "main" . }}{{ end }}
+</main>
+<footer class="site-footer">
+<div class="wrap">&copy; {{ .Site.Params.copyrightYear }} {{ .Site.Params.legalName }}. Company number {{ .Site.Params.companyNumber }}, NZBN {{ .Site.Params.nzbn }}. Incorporated {{ .Site.Params.incorporated }}. GST registered.</div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,12 @@
+# Security headers for Cloudflare Workers static assets: this file is honoured
+# by Workers static assets, so no Transform Rule is needed.
+# frame-ancestors must be a header (it is ignored in a <meta> CSP).
+/*
+  Content-Security-Policy: default-src 'none'; style-src 'self'; img-src 'self'; font-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-Frame-Options: DENY
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+
+https://:project.:subdomain.workers.dev/*
+  X-Robots-Tag: noindex

@@ -1,0 +1,5 @@
+# Build output and local tooling; Cloudflare builds public/ itself.
+public/
+resources/
+.hugo_build.lock
+.wrangler/
