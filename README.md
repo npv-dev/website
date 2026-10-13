@@ -36,6 +36,10 @@ assets project. The settings are:
 | Deploy command | `npx wrangler deploy` |
 | Build variable | `HUGO_VERSION` = `0.167.0` |
 
+Every push to `main` builds and deploys automatically; other branches are not
+built. A change that only touches this README redeploys identical assets, which
+is a safe way to check that the pipeline works.
+
 No credential is stored in this repository or in GitHub: Cloudflare's GitHub app
 is installed on this one repository, and nothing else is needed. Never commit an
 API token, a key or any other secret.
